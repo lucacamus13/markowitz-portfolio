@@ -1,50 +1,48 @@
-# markowitz-portfolio
-.
 # Optimización de Portafolio con el Modelo de Markowitz
 
-Este proyecto implementa el modelo de media-varianza de Harry Markowitz para construir portafolios óptimos en función de la rentabilidad esperada y el riesgo (volatilidad). Se construyen fronteras eficientes y se identifican combinaciones óptimas según distintos criterios.
+Este proyecto implementa el modelo de media-varianza propuesto por Harry Markowitz para construir portafolios óptimos de inversión. Utiliza precios históricos de distintas acciones listadas en EE.UU. para simular portafolios aleatorios y graficar la frontera eficiente, así como identificar el portafolio con mejor relación riesgo-retorno (Sharpe ratio).
 
 ## Objetivo
 
-Optimizar la asignación de activos utilizando datos reales de mercado para:
-- Minimizar la volatilidad.
-- Maximizar la rentabilidad
-- Maximizar el ratio de Sharpe.
-- Construir la frontera eficiente de inversión.
-
-## Herramientas
-
-- Python: `pandas`, `numpy`, `matplotlib`, `yfinance`, `scipy.optimize`
-- Google Colab
-- Datos financieros: precios históricos de activos vía `yfinance`
+- Simular múltiples combinaciones de portafolios de activos financieros.
+- Calcular retornos esperados y volatilidades.
+- Visualizar la frontera eficiente.
+- Determinar el portafolio con la máxima Sharpe Ratio.
 
 ## Metodología
 
-1. Descarga de precios históricos de activos (ej. AAPL, TSLA, AMZN...).
-2. Cálculo de rendimientos diarios y anualizados.
-3. Estimación de matriz de covarianzas.
-4. Simulación de portafolios aleatorios.
-5. Construcción de la frontera eficiente.
-6. Optimización por:
-   - Máximo Sharpe Ratio.
-   - Mínima varianza.
-   - Portafolio objetivo.
+1. Descarga de precios históricos con `yfinance` para activos seleccionados.
+2. Cálculo de retornos diarios, anualizados y matriz de covarianzas.
+3. Simulación de 5,000 portafolios con pesos aleatorios.
+4. Cálculo de retorno esperado, riesgo y ratio de Sharpe para cada uno.
+5. Visualización de la **frontera eficiente** y del **portafolio óptimo**.
+
+## Herramientas y librerías
+
+- `Python`
+- `pandas`, `numpy`
+- `matplotlib`
+- `yfinance`
+- `random`, `math`
 
 ## Resultados
 
-- Gráfico de la frontera eficiente con portafolios simulados.
-- Cálculo del portafolio óptimo según diferentes objetivos.
-- Visualización del peso óptimo de cada activo.
+- Gráfico con miles de portafolios simulados y su relación riesgo-retorno.
+- Identificación del portafolio con mayor Sharpe Ratio.
+- Muestra de la distribución de pesos en el portafolio óptimo.
 
-![Frontera Eficiente]("![image](https://github.com/user-attachments/assets/e473887d-f3d1-4419-9242-29980abc10fb)
-")
+![Frontera Eficiente](images/efficient_frontier.png)
 
 ## Conclusión
 
-El modelo de Markowitz permite visualizar y comparar múltiples combinaciones riesgo/retorno. Aunque simplificado, este enfoque ayuda a entender cómo se construyen portafolios teóricos óptimos. El análisis puede extenderse incluyendo tasas libres de riesgo, restricciones reales o backtesting dinámico.
+El modelo de Markowitz, aunque teórico, permite comprender el trade-off entre retorno y riesgo. Este enfoque puede escalarse para incluir restricciones reales (short selling, rebalanceo) o compararse con otros modelos (Black-Litterman, CVaR).
 
-## Archivos del Proyecto
+## Estructura del proyecto
 
-- `markowitz_portfolio.ipynb`: Notebook principal con el código y visualizaciones.
-- `/images`: Gráficos generados desde el análisis.
+- `markowitz_portfolio.ipynb`: notebook con el código completo.
+- `/images`: gráficos exportados desde el análisis.
+- `README.md`: descripción del proyecto y pasos clave.
 
+## Licencia
+
+MIT License
