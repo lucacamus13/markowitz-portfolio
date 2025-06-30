@@ -36,7 +36,8 @@ Optimizar la asignación de activos utilizando datos reales de mercado para:
 - Cálculo del portafolio óptimo según diferentes objetivos.
 - Visualización del peso óptimo de cada activo.
 
-![Frontera Eficiente]("C:\Users\lucac\OneDrive\Escritorio\descarga.png")
+![Frontera Eficiente]("![image](https://github.com/user-attachments/assets/e473887d-f3d1-4419-9242-29980abc10fb)
+")
 
 ## Conclusión
 
