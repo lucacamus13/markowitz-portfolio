@@ -31,7 +31,8 @@ Este proyecto implementa el modelo de media-varianza propuesto por Harry Markowi
 - Identificación del portafolio con mayor Sharpe Ratio.
 - Muestra de la distribución de pesos en el portafolio óptimo.
 
-![Frontera Eficiente](frontier-efficient.png)
+![Frontera Eficiente](images/frontier-efficient.png)
+![Cartera Eficiente](images/industry-portfolio.png)
 
 ## Conclusión
 
